@@ -1,0 +1,10 @@
+                                               Таблица "public.users"
+      Столбец       |        Тип        | Правило сортировки | Допустимость NULL |           По умолчанию            
+--------------------+-------------------+--------------------+-------------------+-----------------------------------
+ id                 | bigint            |                    | not null          | nextval('users_id_seq'::regclass)
+ email              | character varying |                    | not null          | 
+ encrypted_password | character varying |                    | not null          | 
+Индексы:
+    "users_pkey" PRIMARY KEY, btree (id)
+    "users_email_key" UNIQUE CONSTRAINT, btree (email)
+
